@@ -2,12 +2,19 @@ package panels;
 
 import java.awt.Color;
 
-import gui.Window;
+import javax.swing.JPanel;
 
-public class GameInterface extends Panel{
+import gui.MainWindow;
+
+public class GameInterface extends JPanel{
 	public GameInterface(){
-		super();
-		setBounds(900, 0, Window.WINDOW_WIDTH-Window.GAME_WINDOW_WIDTH, Window.WINDOW_HEIGHT);
+		initPanel();
+	}
+	
+	
+	private void initPanel() {
+		setLayout(null);
+		setBounds(900, 0, MainWindow.WINDOW_WIDTH-MainWindow.GAME_WINDOW_WIDTH, MainWindow.WINDOW_HEIGHT);
 		setBackground(new Color(255,55,164));
 	}
 }
